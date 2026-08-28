@@ -69,6 +69,13 @@ if (count($segments) > 2) {
 // ──────────────────────────────────────────────────────────────────────
 try {
     if ($resource === '' || $resource === 'index.php') {
+        if ($method !== 'GET') {
+            respond(405, [
+                'error'  => 'Método no permitido para esta ruta',
+                'metodo' => $method,
+                'ruta'   => $uri,
+            ]);
+        }
         info_servicio();
     }
 
