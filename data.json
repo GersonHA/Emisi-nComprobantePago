@@ -1,0 +1,38 @@
+{
+    "comprobantes": [
+        {
+            "serie": "B001",
+            "numero": 1,
+            "vendedor": {
+                "nombre": "Juan Pérez",
+                "codigo": "V001"
+            },
+            "cliente": {
+                "tipo_documento": "RUC",
+                "numero_documento": "20123456789",
+                "nombre": "Empresa SAC"
+            },
+            "items": [
+                {
+                    "descripcion": "Coca Cola 500ml",
+                    "cantidad": 2,
+                    "precio_unitario": 5.5,
+                    "subtotal": 11
+                },
+                {
+                    "descripcion": "Papas Lays 100g",
+                    "cantidad": 1,
+                    "precio_unitario": 3,
+                    "subtotal": 3
+                }
+            ],
+            "subtotal": 14,
+            "descuento": 1,
+            "total": 13,
+            "metodo_pago": "EFECTIVO",
+            "id": 1,
+            "fecha": "2026-08-28T21:46:27+00:00"
+        }
+    ],
+    "next_id": 2
+}
