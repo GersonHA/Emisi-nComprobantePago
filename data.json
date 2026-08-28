@@ -1,7 +1,491 @@
 {
     "comprobantes": [
         {
+            "id": 1,
+            "fecha": "2026-08-26T10:19:08+00:00",
             "serie": "B001",
+            "numero": 1,
+            "vendedor": {
+                "nombre": "Juan Pérez",
+                "codigo": "V001"
+            },
+            "cliente": {
+                "tipo_documento": "ND",
+                "numero_documento": "999999999",
+                "Cliente": "Clientes-Varios"
+            },
+            "items": [
+                {
+                    "descripcion": "Coca Cola 500ml",
+                    "cantidad": 2,
+                    "precio_unitario": 5.5,
+                    "precio_total": 11
+                },
+                {
+                    "descripcion": "Papas Lays 100g",
+                    "cantidad": 1,
+                    "precio_unitario": 3.5,
+                    "precio_total": 3.5
+                },
+                {
+                    "descripcion": "Pan ciabatta",
+                    "cantidad": 3,
+                    "precio_unitario": 3,
+                    "precio_total": 9
+                }
+            ],
+            "descuento": 0,
+            "metodo_pago": "YAPE",
+            "subtotal": 19.92,
+            "igv": 3.58,
+            "total": 23.5
+        },
+        {
+            "id": 2,
+            "fecha": "2026-08-26T14:19:08+00:00",
+            "serie": "B001",
+            "numero": 2,
+            "vendedor": {
+                "nombre": "María López",
+                "codigo": "V002"
+            },
+            "cliente": {
+                "tipo_documento": "DNI",
+                "numero_documento": "45678901",
+                "Cliente": "Carlos Ramírez Torres"
+            },
+            "items": [
+                {
+                    "descripcion": "Arroz 1kg",
+                    "cantidad": 2,
+                    "precio_unitario": 7,
+                    "precio_total": 14
+                },
+                {
+                    "descripcion": "Aceite 1L",
+                    "cantidad": 1,
+                    "precio_unitario": 12,
+                    "precio_total": 12
+                },
+                {
+                    "descripcion": "Azúcar 1kg",
+                    "cantidad": 1,
+                    "precio_unitario": 5.5,
+                    "precio_total": 5.5
+                },
+                {
+                    "descripcion": "Fideos 500g",
+                    "cantidad": 3,
+                    "precio_unitario": 2,
+                    "precio_total": 6
+                },
+                {
+                    "descripcion": "Atún en lata",
+                    "cantidad": 4,
+                    "precio_unitario": 4,
+                    "precio_total": 16
+                }
+            ],
+            "descuento": 5,
+            "metodo_pago": "EFECTIVO",
+            "subtotal": 41.1,
+            "igv": 7.4,
+            "total": 48.5
+        },
+        {
+            "id": 3,
+            "fecha": "2026-08-26T18:19:08+00:00",
+            "serie": "B001",
+            "numero": 3,
+            "vendedor": {
+                "nombre": "Ana Torres",
+                "codigo": "V003"
+            },
+            "cliente": {
+                "tipo_documento": "DNI",
+                "numero_documento": "12345678",
+                "Cliente": "Lucía Mendoza Ríos"
+            },
+            "items": [
+                {
+                    "descripcion": "Inca Kola 500ml",
+                    "cantidad": 4,
+                    "precio_unitario": 5.5,
+                    "precio_total": 22
+                },
+                {
+                    "descripcion": "Sprite 500ml",
+                    "cantidad": 2,
+                    "precio_unitario": 5,
+                    "precio_total": 10
+                },
+                {
+                    "descripcion": "Galletas Morochas",
+                    "cantidad": 3,
+                    "precio_unitario": 2.5,
+                    "precio_total": 7.5
+                },
+                {
+                    "descripcion": "Chocolate Sublime",
+                    "cantidad": 5,
+                    "precio_unitario": 2.5,
+                    "precio_total": 12.5
+                },
+                {
+                    "descripcion": "Caramelos Halls",
+                    "cantidad": 2,
+                    "precio_unitario": 1,
+                    "precio_total": 2
+                },
+                {
+                    "descripcion": "Chicles Trident",
+                    "cantidad": 4,
+                    "precio_unitario": 1,
+                    "precio_total": 4
+                },
+                {
+                    "descripcion": "Agua San Luis 625ml",
+                    "cantidad": 6,
+                    "precio_unitario": 2.5,
+                    "precio_total": 15
+                },
+                {
+                    "descripcion": "Mentas Eclipse",
+                    "cantidad": 2,
+                    "precio_unitario": 1.25,
+                    "precio_total": 2.5
+                }
+            ],
+            "descuento": 0,
+            "metodo_pago": "PLIN",
+            "subtotal": 63.98,
+            "igv": 11.52,
+            "total": 75.5
+        },
+        {
+            "id": 4,
+            "fecha": "2026-08-26T22:19:08+00:00",
+            "serie": "B001",
+            "numero": 4,
+            "vendedor": {
+                "nombre": "Carlos Mendoza",
+                "codigo": "V004"
+            },
+            "cliente": {
+                "tipo_documento": "CE",
+                "numero_documento": "001234567",
+                "Cliente": "John Smith"
+            },
+            "items": [
+                {
+                    "descripcion": "Licencia Office 365 Personal",
+                    "cantidad": 1,
+                    "precio_unitario": 350,
+                    "precio_total": 350
+                },
+                {
+                    "descripcion": "Mouse Logitech M170",
+                    "cantidad": 1,
+                    "precio_unitario": 89.9,
+                    "precio_total": 89.9
+                },
+                {
+                    "descripcion": "Cable HDMI 2m",
+                    "cantidad": 2,
+                    "precio_unitario": 15,
+                    "precio_total": 30
+                },
+                {
+                    "descripcion": "USB Kingston 32GB",
+                    "cantidad": 1,
+                    "precio_unitario": 35,
+                    "precio_total": 35
+                }
+            ],
+            "descuento": 0,
+            "metodo_pago": "TARJETA",
+            "subtotal": 427.88,
+            "igv": 77.02,
+            "total": 504.9
+        },
+        {
+            "id": 5,
+            "fecha": "2026-08-27T02:19:08+00:00",
+            "serie": "B001",
+            "numero": 5,
+            "vendedor": {
+                "nombre": "Rosa García",
+                "codigo": "V005"
+            },
+            "cliente": {
+                "tipo_documento": "ND",
+                "numero_documento": "999999999",
+                "Cliente": "Clientes-Varios"
+            },
+            "items": [
+                {
+                    "descripcion": "Sándwich de jamón",
+                    "cantidad": 2,
+                    "precio_unitario": 12,
+                    "precio_total": 24
+                },
+                {
+                    "descripcion": "Café americano",
+                    "cantidad": 2,
+                    "precio_unitario": 7,
+                    "precio_total": 14
+                },
+                {
+                    "descripcion": "Jugo de naranja",
+                    "cantidad": 2,
+                    "precio_unitario": 8,
+                    "precio_total": 16
+                },
+                {
+                    "descripcion": "Queque de vainilla",
+                    "cantidad": 1,
+                    "precio_unitario": 8,
+                    "precio_total": 8
+                },
+                {
+                    "descripcion": "Alfajor",
+                    "cantidad": 3,
+                    "precio_unitario": 3,
+                    "precio_total": 9
+                },
+                {
+                    "descripcion": "Brownie de chocolate",
+                    "cantidad": 2,
+                    "precio_unitario": 6,
+                    "precio_total": 12
+                },
+                {
+                    "descripcion": "Galleta con chispas",
+                    "cantidad": 4,
+                    "precio_unitario": 3,
+                    "precio_total": 12
+                },
+                {
+                    "descripcion": "Empanada de pollo",
+                    "cantidad": 3,
+                    "precio_unitario": 5,
+                    "precio_total": 15
+                },
+                {
+                    "descripcion": "Té helado",
+                    "cantidad": 2,
+                    "precio_unitario": 7,
+                    "precio_total": 14
+                },
+                {
+                    "descripcion": "Pie de manzana",
+                    "cantidad": 1,
+                    "precio_unitario": 10,
+                    "precio_total": 10
+                }
+            ],
+            "descuento": 15,
+            "metodo_pago": "EFECTIVO",
+            "subtotal": 100.85,
+            "igv": 18.15,
+            "total": 119
+        },
+        {
+            "id": 6,
+            "fecha": "2026-08-27T06:19:08+00:00",
+            "serie": "B001",
+            "numero": 6,
+            "vendedor": {
+                "nombre": "Juan Pérez",
+                "codigo": "V001"
+            },
+            "cliente": {
+                "tipo_documento": "DNI",
+                "numero_documento": "78945612",
+                "Cliente": "Patricia Vega Salas"
+            },
+            "items": [
+                {
+                    "descripcion": "Cuaderno universitario 100h",
+                    "cantidad": 4,
+                    "precio_unitario": 6,
+                    "precio_total": 24
+                },
+                {
+                    "descripcion": "Lapicero Pilot azul",
+                    "cantidad": 6,
+                    "precio_unitario": 1.5,
+                    "precio_total": 9
+                },
+                {
+                    "descripcion": "Lápiz Faber negro",
+                    "cantidad": 5,
+                    "precio_unitario": 1,
+                    "precio_total": 5
+                },
+                {
+                    "descripcion": "Borrador blanco",
+                    "cantidad": 3,
+                    "precio_unitario": 0.5,
+                    "precio_total": 1.5
+                },
+                {
+                    "descripcion": "Tajador metálico",
+                    "cantidad": 2,
+                    "precio_unitario": 0.5,
+                    "precio_total": 1
+                },
+                {
+                    "descripcion": "Regla 30cm",
+                    "cantidad": 1,
+                    "precio_unitario": 2.5,
+                    "precio_total": 2.5
+                }
+            ],
+            "descuento": 0,
+            "metodo_pago": "TRANSFERENCIA",
+            "subtotal": 36.44,
+            "igv": 6.56,
+            "total": 43
+        },
+        {
+            "id": 7,
+            "fecha": "2026-08-27T10:19:08+00:00",
+            "serie": "B001",
+            "numero": 7,
+            "vendedor": {
+                "nombre": "María López",
+                "codigo": "V002"
+            },
+            "cliente": {
+                "tipo_documento": "ND",
+                "numero_documento": "999999999",
+                "Cliente": "Clientes-Varios"
+            },
+            "items": [
+                {
+                    "descripcion": "Impresión B/N A4",
+                    "cantidad": 50,
+                    "precio_unitario": 0.5,
+                    "precio_total": 25
+                },
+                {
+                    "descripcion": "Anillado",
+                    "cantidad": 1,
+                    "precio_unitario": 8,
+                    "precio_total": 8
+                },
+                {
+                    "descripcion": "Empastado",
+                    "cantidad": 1,
+                    "precio_unitario": 35,
+                    "precio_total": 35
+                }
+            ],
+            "descuento": 0,
+            "metodo_pago": "YAPE",
+            "subtotal": 57.63,
+            "igv": 10.37,
+            "total": 68
+        },
+        {
+            "id": 8,
+            "fecha": "2026-08-27T14:19:08+00:00",
+            "serie": "B001",
+            "numero": 8,
+            "vendedor": {
+                "nombre": "Ana Torres",
+                "codigo": "V003"
+            },
+            "cliente": {
+                "tipo_documento": "DNI",
+                "numero_documento": "55667788",
+                "Cliente": "Miguel Sánchez Quispe"
+            },
+            "items": [
+                {
+                    "descripcion": "Detergente Ace 1kg",
+                    "cantidad": 2,
+                    "precio_unitario": 18,
+                    "precio_total": 36
+                },
+                {
+                    "descripcion": "Lavavajillas Ayudín 500g",
+                    "cantidad": 1,
+                    "precio_unitario": 12,
+                    "precio_total": 12
+                },
+                {
+                    "descripcion": "Esponja Scotch-Brite",
+                    "cantidad": 4,
+                    "precio_unitario": 2.5,
+                    "precio_total": 10
+                },
+                {
+                    "descripcion": "Papel higiénico 4 rollos",
+                    "cantidad": 3,
+                    "precio_unitario": 8,
+                    "precio_total": 24
+                },
+                {
+                    "descripcion": "Jabón líquido 500ml",
+                    "cantidad": 2,
+                    "precio_unitario": 10,
+                    "precio_total": 20
+                },
+                {
+                    "descripcion": "Shampoo Head & Shoulders",
+                    "cantidad": 1,
+                    "precio_unitario": 25,
+                    "precio_total": 25
+                },
+                {
+                    "descripcion": "Acondicionador Sedal",
+                    "cantidad": 1,
+                    "precio_unitario": 22,
+                    "precio_total": 22
+                },
+                {
+                    "descripcion": "Pasta dental Colgate",
+                    "cantidad": 2,
+                    "precio_unitario": 8,
+                    "precio_total": 16
+                },
+                {
+                    "descripcion": "Cepillo dental",
+                    "cantidad": 3,
+                    "precio_unitario": 4,
+                    "precio_total": 12
+                },
+                {
+                    "descripcion": "Desodorante Rexona",
+                    "cantidad": 2,
+                    "precio_unitario": 12,
+                    "precio_total": 24
+                },
+                {
+                    "descripcion": "Toallas húmedas 50u",
+                    "cantidad": 1,
+                    "precio_unitario": 15,
+                    "precio_total": 15
+                },
+                {
+                    "descripcion": "Ambientador Glade",
+                    "cantidad": 2,
+                    "precio_unitario": 14,
+                    "precio_total": 28
+                }
+            ],
+            "descuento": 10,
+            "metodo_pago": "EFECTIVO",
+            "subtotal": 198.31,
+            "igv": 35.69,
+            "total": 234
+        },
+        {
+            "id": 9,
+            "fecha": "2026-08-27T18:19:08+00:00",
+            "serie": "F001",
             "numero": 1,
             "vendedor": {
                 "nombre": "Juan Pérez",
@@ -10,29 +494,594 @@
             "cliente": {
                 "tipo_documento": "RUC",
                 "numero_documento": "20123456789",
-                "nombre": "Empresa SAC"
+                "Cliente": "Distribuidora ABC S.A.C."
             },
             "items": [
                 {
-                    "descripcion": "Coca Cola 500ml",
-                    "cantidad": 2,
-                    "precio_unitario": 5.5,
-                    "subtotal": 11
+                    "descripcion": "Servicio de consultoría",
+                    "cantidad": 10,
+                    "precio_unitario": 80,
+                    "precio_total": 800
                 },
                 {
-                    "descripcion": "Papas Lays 100g",
+                    "descripcion": "Reunión de seguimiento",
+                    "cantidad": 4,
+                    "precio_unitario": 60,
+                    "precio_total": 240
+                },
+                {
+                    "descripcion": "Informe ejecutivo",
                     "cantidad": 1,
-                    "precio_unitario": 3,
-                    "subtotal": 3
+                    "precio_unitario": 250,
+                    "precio_total": 250
+                },
+                {
+                    "descripcion": "Presentación PowerPoint",
+                    "cantidad": 2,
+                    "precio_unitario": 90,
+                    "precio_total": 180
+                },
+                {
+                    "descripcion": "Análisis de datos",
+                    "cantidad": 8,
+                    "precio_unitario": 70,
+                    "precio_total": 560
+                },
+                {
+                    "descripcion": "Reporte mensual",
+                    "cantidad": 1,
+                    "precio_unitario": 180,
+                    "precio_total": 180
+                },
+                {
+                    "descripcion": "Capacitación al equipo",
+                    "cantidad": 3,
+                    "precio_unitario": 120,
+                    "precio_total": 360
                 }
             ],
-            "subtotal": 14,
-            "descuento": 1,
-            "total": 13,
+            "descuento": 0,
+            "metodo_pago": "TRANSFERENCIA",
+            "subtotal": 2177.97,
+            "igv": 392.03,
+            "total": 2570
+        },
+        {
+            "id": 10,
+            "fecha": "2026-08-27T22:19:08+00:00",
+            "serie": "F001",
+            "numero": 2,
+            "vendedor": {
+                "nombre": "María López",
+                "codigo": "V002"
+            },
+            "cliente": {
+                "tipo_documento": "RUC",
+                "numero_documento": "20987654321",
+                "Cliente": "Tecnología del Sur S.R.L."
+            },
+            "items": [
+                {
+                    "descripcion": "Laptop HP Pavilion 15\"",
+                    "cantidad": 2,
+                    "precio_unitario": 2500,
+                    "precio_total": 5000
+                },
+                {
+                    "descripcion": "Monitor LG 24\"",
+                    "cantidad": 4,
+                    "precio_unitario": 650,
+                    "precio_total": 2600
+                },
+                {
+                    "descripcion": "Teclado mecánico",
+                    "cantidad": 4,
+                    "precio_unitario": 180,
+                    "precio_total": 720
+                },
+                {
+                    "descripcion": "Mouse inalámbrico",
+                    "cantidad": 4,
+                    "precio_unitario": 85,
+                    "precio_total": 340
+                },
+                {
+                    "descripcion": "Webcam Logitech C920",
+                    "cantidad": 4,
+                    "precio_unitario": 320,
+                    "precio_total": 1280
+                },
+                {
+                    "descripcion": "Auriculares con micrófono",
+                    "cantidad": 4,
+                    "precio_unitario": 220,
+                    "precio_total": 880
+                },
+                {
+                    "descripcion": "Hub USB-C 7 puertos",
+                    "cantidad": 3,
+                    "precio_unitario": 150,
+                    "precio_total": 450
+                },
+                {
+                    "descripcion": "Cable de red Cat6 5m",
+                    "cantidad": 6,
+                    "precio_unitario": 25,
+                    "precio_total": 150
+                },
+                {
+                    "descripcion": "Adaptador HDMI-VGA",
+                    "cantidad": 4,
+                    "precio_unitario": 35,
+                    "precio_total": 140
+                },
+                {
+                    "descripcion": "Disco SSD 1TB",
+                    "cantidad": 3,
+                    "precio_unitario": 480,
+                    "precio_total": 1440
+                },
+                {
+                    "descripcion": "Memoria RAM 16GB DDR4",
+                    "cantidad": 4,
+                    "precio_unitario": 320,
+                    "precio_total": 1280
+                },
+                {
+                    "descripcion": "Licencia Windows 11 Pro",
+                    "cantidad": 4,
+                    "precio_unitario": 480,
+                    "precio_total": 1920
+                },
+                {
+                    "descripcion": "Licencia Microsoft 365",
+                    "cantidad": 4,
+                    "precio_unitario": 380,
+                    "precio_total": 1520
+                },
+                {
+                    "descripcion": "Mochila para laptop",
+                    "cantidad": 4,
+                    "precio_unitario": 150,
+                    "precio_total": 600
+                },
+                {
+                    "descripcion": "Base refrigerante",
+                    "cantidad": 4,
+                    "precio_unitario": 95,
+                    "precio_total": 380
+                }
+            ],
+            "descuento": 500,
+            "metodo_pago": "TARJETA",
+            "subtotal": 15423.73,
+            "igv": 2776.27,
+            "total": 18200
+        },
+        {
+            "id": 11,
+            "fecha": "2026-08-28T02:19:08+00:00",
+            "serie": "F001",
+            "numero": 3,
+            "vendedor": {
+                "nombre": "Ana Torres",
+                "codigo": "V003"
+            },
+            "cliente": {
+                "tipo_documento": "RUC",
+                "numero_documento": "20456789123",
+                "Cliente": "Servicios Generales XYZ E.I.R.L."
+            },
+            "items": [
+                {
+                    "descripcion": "Limpieza profunda oficina 200m²",
+                    "cantidad": 1,
+                    "precio_unitario": 350,
+                    "precio_total": 350
+                },
+                {
+                    "descripcion": "Limpieza de ventanas",
+                    "cantidad": 8,
+                    "precio_unitario": 25,
+                    "precio_total": 200
+                },
+                {
+                    "descripcion": "Desinfección de ambientes",
+                    "cantidad": 1,
+                    "precio_unitario": 200,
+                    "precio_total": 200
+                },
+                {
+                    "descripcion": "Limpieza de alfombras",
+                    "cantidad": 3,
+                    "precio_unitario": 80,
+                    "precio_total": 240
+                },
+                {
+                    "descripcion": "Suministro de papel toalla",
+                    "cantidad": 12,
+                    "precio_unitario": 15,
+                    "precio_total": 180
+                },
+                {
+                    "descripcion": "Jabón líquido antibacterial",
+                    "cantidad": 6,
+                    "precio_unitario": 18,
+                    "precio_total": 108
+                },
+                {
+                    "descripcion": "Ambientador automático",
+                    "cantidad": 2,
+                    "precio_unitario": 65,
+                    "precio_total": 130
+                },
+                {
+                    "descripcion": "Mantenimiento de pisos",
+                    "cantidad": 1,
+                    "precio_unitario": 280,
+                    "precio_total": 280
+                },
+                {
+                    "descripcion": "Personal adicional fin de semana",
+                    "cantidad": 2,
+                    "precio_unitario": 150,
+                    "precio_total": 300
+                }
+            ],
+            "descuento": 0,
+            "metodo_pago": "TRANSFERENCIA",
+            "subtotal": 1684.75,
+            "igv": 303.25,
+            "total": 1988
+        },
+        {
+            "id": 12,
+            "fecha": "2026-08-28T06:19:08+00:00",
+            "serie": "F001",
+            "numero": 4,
+            "vendedor": {
+                "nombre": "Carlos Mendoza",
+                "codigo": "V004"
+            },
+            "cliente": {
+                "tipo_documento": "RUC",
+                "numero_documento": "20555111222",
+                "Cliente": "Consultora Lima S.A."
+            },
+            "items": [
+                {
+                    "descripcion": "Auditoría contable",
+                    "cantidad": 1,
+                    "precio_unitario": 3500,
+                    "precio_total": 3500
+                },
+                {
+                    "descripcion": "Revisión de estados financieros",
+                    "cantidad": 1,
+                    "precio_unitario": 1800,
+                    "precio_total": 1800
+                },
+                {
+                    "descripcion": "Dictamen profesional",
+                    "cantidad": 1,
+                    "precio_unitario": 1200,
+                    "precio_total": 1200
+                },
+                {
+                    "descripcion": "Reunión de cierre",
+                    "cantidad": 4,
+                    "precio_unitario": 250,
+                    "precio_total": 1000
+                }
+            ],
+            "descuento": 0,
+            "metodo_pago": "TARJETA",
+            "subtotal": 6355.93,
+            "igv": 1144.07,
+            "total": 7500
+        },
+        {
+            "id": 13,
+            "fecha": "2026-08-28T10:19:08+00:00",
+            "serie": "F001",
+            "numero": 5,
+            "vendedor": {
+                "nombre": "Rosa García",
+                "codigo": "V005"
+            },
+            "cliente": {
+                "tipo_documento": "RUC",
+                "numero_documento": "20333444555",
+                "Cliente": "Restaurant El Sabor S.A.C."
+            },
+            "items": [
+                {
+                    "descripcion": "Pollo entero",
+                    "cantidad": 15,
+                    "precio_unitario": 18,
+                    "precio_total": 270
+                },
+                {
+                    "descripcion": "Arroz 5kg",
+                    "cantidad": 4,
+                    "precio_unitario": 32,
+                    "precio_total": 128
+                },
+                {
+                    "descripcion": "Papa amarilla 1kg",
+                    "cantidad": 10,
+                    "precio_unitario": 5,
+                    "precio_total": 50
+                },
+                {
+                    "descripcion": "Huevos 12u",
+                    "cantidad": 6,
+                    "precio_unitario": 12,
+                    "precio_total": 72
+                },
+                {
+                    "descripcion": "Aceite 5L",
+                    "cantidad": 3,
+                    "precio_unitario": 55,
+                    "precio_total": 165
+                },
+                {
+                    "descripcion": "Cebolla 1kg",
+                    "cantidad": 8,
+                    "precio_unitario": 3.5,
+                    "precio_total": 28
+                },
+                {
+                    "descripcion": "Tomate 1kg",
+                    "cantidad": 8,
+                    "precio_unitario": 5,
+                    "precio_total": 40
+                },
+                {
+                    "descripcion": "Limón 1kg",
+                    "cantidad": 6,
+                    "precio_unitario": 6,
+                    "precio_total": 36
+                },
+                {
+                    "descripcion": "Ajo 1kg",
+                    "cantidad": 2,
+                    "precio_unitario": 18,
+                    "precio_total": 36
+                },
+                {
+                    "descripcion": "Sal 1kg",
+                    "cantidad": 4,
+                    "precio_unitario": 2.5,
+                    "precio_total": 10
+                },
+                {
+                    "descripcion": "Comino molido 100g",
+                    "cantidad": 5,
+                    "precio_unitario": 4.5,
+                    "precio_total": 22.5
+                }
+            ],
+            "descuento": 50,
+            "metodo_pago": "TRANSFERENCIA",
+            "subtotal": 684.32,
+            "igv": 123.18,
+            "total": 807.5
+        },
+        {
+            "id": 14,
+            "fecha": "2026-08-28T14:19:08+00:00",
+            "serie": "F001",
+            "numero": 6,
+            "vendedor": {
+                "nombre": "Juan Pérez",
+                "codigo": "V001"
+            },
+            "cliente": {
+                "tipo_documento": "RUC",
+                "numero_documento": "20666777888",
+                "Cliente": "Publicidad Creativa S.R.L."
+            },
+            "items": [
+                {
+                    "descripcion": "Diseño de logo",
+                    "cantidad": 1,
+                    "precio_unitario": 800,
+                    "precio_total": 800
+                },
+                {
+                    "descripcion": "Manual de marca",
+                    "cantidad": 1,
+                    "precio_unitario": 1500,
+                    "precio_total": 1500
+                },
+                {
+                    "descripcion": "Tarjetas de presentación 1000u",
+                    "cantidad": 2,
+                    "precio_unitario": 180,
+                    "precio_total": 360
+                },
+                {
+                    "descripcion": "Diseño de brochure",
+                    "cantidad": 1,
+                    "precio_unitario": 450,
+                    "precio_total": 450
+                },
+                {
+                    "descripcion": "Banner publicitario 2x1m",
+                    "cantidad": 3,
+                    "precio_unitario": 120,
+                    "precio_total": 360
+                },
+                {
+                    "descripcion": "Gestión de redes sociales mensual",
+                    "cantidad": 1,
+                    "precio_unitario": 2200,
+                    "precio_total": 2200
+                }
+            ],
+            "descuento": 0,
+            "metodo_pago": "TARJETA",
+            "subtotal": 4805.08,
+            "igv": 864.92,
+            "total": 5670
+        },
+        {
+            "id": 15,
+            "fecha": "2026-08-28T18:19:08+00:00",
+            "serie": "F001",
+            "numero": 7,
+            "vendedor": {
+                "nombre": "María López",
+                "codigo": "V002"
+            },
+            "cliente": {
+                "tipo_documento": "RUC",
+                "numero_documento": "20777888999",
+                "Cliente": "Constructora Andina S.A.C."
+            },
+            "items": [
+                {
+                    "descripcion": "Cemento 1 bolsa",
+                    "cantidad": 30,
+                    "precio_unitario": 28,
+                    "precio_total": 840
+                },
+                {
+                    "descripcion": "Fierro 1/2\" 9m",
+                    "cantidad": 20,
+                    "precio_unitario": 35,
+                    "precio_total": 700
+                },
+                {
+                    "descripcion": "Arena gruesa m³",
+                    "cantidad": 4,
+                    "precio_unitario": 80,
+                    "precio_total": 320
+                },
+                {
+                    "descripcion": "Piedra chancada m³",
+                    "cantidad": 3,
+                    "precio_unitario": 90,
+                    "precio_total": 270
+                },
+                {
+                    "descripcion": "Ladrillo king kong 18h",
+                    "cantidad": 500,
+                    "precio_unitario": 1.2,
+                    "precio_total": 600
+                },
+                {
+                    "descripcion": "Mayólica 30x30 m²",
+                    "cantidad": 25,
+                    "precio_unitario": 35,
+                    "precio_total": 875
+                },
+                {
+                    "descripcion": "Pintura látex 4GL",
+                    "cantidad": 8,
+                    "precio_unitario": 95,
+                    "precio_total": 760
+                },
+                {
+                    "descripcion": "Tubo PVC 4\" 3m",
+                    "cantidad": 12,
+                    "precio_unitario": 25,
+                    "precio_total": 300
+                },
+                {
+                    "descripcion": "Cables eléctricos 12 AWG m",
+                    "cantidad": 50,
+                    "precio_unitario": 3.5,
+                    "precio_total": 175
+                },
+                {
+                    "descripcion": "Caja de breakers",
+                    "cantidad": 2,
+                    "precio_unitario": 180,
+                    "precio_total": 360
+                },
+                {
+                    "descripcion": "Tornillos autoroscantes 100u",
+                    "cantidad": 5,
+                    "precio_unitario": 35,
+                    "precio_total": 175
+                },
+                {
+                    "descripcion": "Lija de agua 50u",
+                    "cantidad": 2,
+                    "precio_unitario": 28,
+                    "precio_total": 56
+                },
+                {
+                    "descripcion": "Silicona transparente",
+                    "cantidad": 6,
+                    "precio_unitario": 18,
+                    "precio_total": 108
+                }
+            ],
+            "descuento": 200,
+            "metodo_pago": "TRANSFERENCIA",
+            "subtotal": 4524.58,
+            "igv": 814.42,
+            "total": 5339
+        },
+        {
+            "id": 16,
+            "fecha": "2026-08-28T22:19:13+00:00",
+            "serie": "TEST",
+            "numero": 1,
+            "vendedor": {
+                "nombre": "x",
+                "codigo": "x"
+            },
+            "cliente": {
+                "tipo_documento": "DNI",
+                "numero_documento": "12345678",
+                "Cliente": "Test"
+            },
+            "items": [
+                {
+                    "descripcion": "Producto A",
+                    "cantidad": 2,
+                    "precio_unitario": 5,
+                    "precio_total": 10
+                }
+            ],
+            "subtotal": 8.47,
+            "descuento": 0,
+            "igv": 1.53,
+            "total": 10,
+            "metodo_pago": "EFECTIVO"
+        },
+        {
+            "id": 17,
+            "fecha": "2026-08-28T22:19:48+00:00",
+            "serie": "TEST",
+            "numero": 99,
+            "vendedor": {
+                "nombre": "x",
+                "codigo": "x"
+            },
+            "cliente": {
+                "tipo_documento": "DNI",
+                "numero_documento": "12345678",
+                "Cliente": "Test"
+            },
+            "items": [
+                {
+                    "descripcion": "A",
+                    "cantidad": 2,
+                    "precio_unitario": 5,
+                    "precio_total": 10
+                }
+            ],
+            "descuento": 0,
             "metodo_pago": "EFECTIVO",
-            "id": 1,
-            "fecha": "2026-08-28T21:46:27+00:00"
+            "subtotal": 8.47,
+            "igv": 1.53,
+            "total": 10
         }
     ],
-    "next_id": 2
+    "next_id": 18
 }

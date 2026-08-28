@@ -18,6 +18,12 @@
 
 declare(strict_types=1);
 
+/**
+ * Tasa del IGV (Impuesto General a las Ventas) en Perú.
+ * El 18% se aplica sobre la base gravable (subtotal - descuento).
+ */
+const IGV_RATE = 0.18;
+
 require_once __DIR__ . '/storage.php';
 
 // ──────────────────────────────────────────────────────────────────────
@@ -150,6 +156,7 @@ function crear(): void
 
     $data['id']    = next_id();
     $data['fecha'] = date('c'); // ISO 8601, automático
+    $data = reorder_with_id_fecha_first($data);
     add_comprobante($data);
     respond(201, $data);
 }
@@ -173,8 +180,21 @@ function actualizar(int $id): void
 
     $data['id']    = $id;
     $data['fecha'] = $existente['fecha']; // la fecha original se preserva
+    $data = reorder_with_id_fecha_first($data);
     $guardado = replace_comprobante($id, $data);
     respond(200, $guardado);
+}
+
+/**
+ * Reordena el array del comprobante para que `id` y `fecha` queden al inicio.
+ */
+function reorder_with_id_fecha_first(array $data): array
+{
+    $id    = $data['id']    ?? null;
+    $fecha = $data['fecha'] ?? null;
+    unset($data['id'], $data['fecha']);
+    $head = array_filter(['id' => $id, 'fecha' => $fecha], fn($v) => $v !== null);
+    return $head + $data;
 }
 
 function eliminar(int $id): void
@@ -228,14 +248,20 @@ function build_comprobante(array $input): array
     // items
     $items = build_items($input['items']);
 
-    // cálculos del servidor
-    $subtotal  = array_sum(array_map(fn($i) => $i['subtotal'], $items));
-    $descuento = isset($input['descuento']) ? (float) $input['descuento'] : 0.0;
+    // cálculos del servidor (incluyen IGV)
+    // El precio_unitario de los items incluye IGV, así que la suma de los items
+    // es el total BRUTO (lo que paga el cliente). El subtotal del comprobante
+    // es la base gravable (sin IGV) y se obtiene dividiendo entre 1.18.
+    $items_gross   = array_sum(array_map(fn($i) => $i['precio_total'], $items));
+    $descuento     = isset($input['descuento']) ? (float) $input['descuento'] : 0.0;
     if ($descuento < 0) {
         $descuento = 0.0;
     }
-    $descuento = min($descuento, $subtotal); // no puede superar al subtotal
-    $total     = round($subtotal - $descuento, 2);
+    $descuento     = min($descuento, $items_gross);
+    $total_gravable = $items_gross - $descuento;
+    $subtotal      = round($total_gravable / (1 + IGV_RATE), 2);
+    $igv           = round($total_gravable - $subtotal, 2);
+    $total         = round($subtotal + $igv, 2);
 
     // metodo_pago
     $metodos_validos = ['EFECTIVO', 'TARJETA', 'YAPE', 'PLIN', 'TRANSFERENCIA'];
@@ -252,10 +278,11 @@ function build_comprobante(array $input): array
         'vendedor'    => $vendedor,
         'cliente'     => $cliente,
         'items'       => $items,
-        'subtotal'    => round($subtotal, 2),
         'descuento'   => round($descuento, 2),
-        'total'       => $total,
         'metodo_pago' => $metodo_pago,
+        'subtotal'    => $subtotal,    // base gravable (sin IGV)
+        'igv'         => $igv,         // 18% de la base gravable
+        'total'       => $total,       // lo que paga el cliente (con IGV)
     ];
 }
 
@@ -271,27 +298,37 @@ function build_vendedor(array $v): array
 
 function build_cliente(array $c): array
 {
-    $tipos_validos = ['RUC', 'DNI', 'CE', 'ND']; // CE = Carnet de Extranjería, ND = No Documento
+    $tipos_validos = ['RUC', 'DNI', 'CE', 'ND'];
     $tipo = strtoupper(trim((string) ($c['tipo_documento'] ?? '')));
     if (!in_array($tipo, $tipos_validos, true)) {
         throw new InvalidArgumentException(
             'cliente.tipo_documento debe ser uno de: ' . implode(', ', $tipos_validos)
         );
     }
-    $numero = trim((string) ($c['numero_documento'] ?? ''));
-    $nombre = trim((string) ($c['nombre'] ?? ''));
-    if ($tipo !== 'ND' && $numero === '') {
-        throw new InvalidArgumentException(
-            'cliente.numero_documento es obligatorio cuando tipo_documento no es ND'
-        );
+
+    $numero  = trim((string) ($c['numero_documento'] ?? ''));
+    $cliente = trim((string) ($c['Cliente'] ?? ''));
+
+    // Para ND, si el cliente no envía documento o nombre, el server rellena
+    // con valores por defecto representativos.
+    if ($tipo === 'ND') {
+        if ($numero === '')  $numero  = '999999999';
+        if ($cliente === '') $cliente = 'Clientes-Varios';
+    } else {
+        if ($numero === '') {
+            throw new InvalidArgumentException(
+                'cliente.numero_documento es obligatorio cuando tipo_documento no es ND'
+            );
+        }
+        if ($cliente === '') {
+            throw new InvalidArgumentException('cliente.Cliente es obligatorio');
+        }
     }
-    if ($nombre === '') {
-        throw new InvalidArgumentException('cliente.nombre es obligatorio');
-    }
+
     return [
         'tipo_documento'   => $tipo,
-        'numero_documento' => $numero !== '' ? $numero : null,
-        'nombre'           => $nombre,
+        'numero_documento' => $numero,
+        'Cliente'          => $cliente,
     ];
 }
 
@@ -324,7 +361,7 @@ function build_items(array $items): array
             'descripcion'     => $desc,
             'cantidad'        => $cant,
             'precio_unitario' => $pu,
-            'subtotal'        => round($cant * $pu, 2),
+            'precio_total'    => round($cant * $pu, 2),
         ];
     }
     return $out;
